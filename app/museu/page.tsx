@@ -20,10 +20,15 @@ import { ObraHangar } from "@/components/scene/obras/ObraHangar";
 import { Loader } from "@/components/scene/Loader";
 import { PostProcessing } from "@/components/scene/PostProcessing";
 import { useProximidade } from "@/hooks/useProximidade";
+import { useNavegacaoAcessivel } from "@/hooks/useNavegacaoAcessivel";
 import { PainelFlutuante } from "@/components/ui/PainelFlutuante";
 import { SidePanel } from "@/components/ui/SidePanel";
 import { HUD, Mira } from "@/components/ui/HUD";
 import { BotaoVR } from "@/components/ui/BotaoVR";
+import { PainelAcessibilidade } from "@/components/ui/PainelAcessibilidade";
+import { AudiodescricaoProximidade } from "@/components/ui/AudiodescricaoProximidade";
+import { ModalPreferenciasInicial } from "@/components/ui/ModalPreferenciasInicial";
+import { NavegacaoAcessivel } from "@/components/ui/NavegacaoAcessivel";
 
 const RENDERIZADORES_POR_ID = {
   locomotiva: Locomotiva,
@@ -53,13 +58,23 @@ function Cena() {
   );
 }
 
+function AtalhosTeclado() {
+  useNavegacaoAcessivel();
+  return null;
+}
+
 export default function MuseuPage() {
   return (
-    <main className="relative h-screen w-screen overflow-hidden">
+    <main
+      role="main"
+      aria-label="Museu virtual UsinaVR — percurso interativo pelo acervo da Usina de Arte"
+      className="relative h-screen w-screen overflow-hidden"
+    >
       <Canvas
         shadows
         gl={{ antialias: true }}
         camera={{ fov: 70, near: 0.1, far: 800, position: [0, 1.7, 12] }}
+        aria-hidden="true"
       >
         <XR>
           <Suspense fallback={<Loader />}>
@@ -70,11 +85,17 @@ export default function MuseuPage() {
         </XR>
       </Canvas>
 
+      <NavegacaoAcessivel />
+      <AtalhosTeclado />
+      <AudiodescricaoProximidade />
+
       <Mira />
       <PainelFlutuante />
       <SidePanel />
       <HUD />
       <BotaoVR />
+      <PainelAcessibilidade />
+      <ModalPreferenciasInicial />
     </main>
   );
 }

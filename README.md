@@ -76,8 +76,8 @@ O ambiente virtual recria um percurso linear de aproximadamente 200 m partindo d
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/seu-usuario/UsinaVR-Museu-Digital.git
-cd UsinaVR-Museu-Digital
+git clone https://github.com/JoneyPereira/usina-de-arte-web3.git
+cd usina-de-arte-web3
 
 # 2. Instale as dependências
 npm install
@@ -174,13 +174,48 @@ O desenvolvimento seguiu uma abordagem incremental: primeiro a cena vazia com te
 
 ---
 
+## Acessibilidade
+
+O UsinaVR foi desenvolvido com acessibilidade como prioridade estrutural, não como recurso adicional. A Fase 3 do projeto implementa recursos para garantir que pessoas com deficiência visual e auditiva possam vivenciar plenamente o museu virtual.
+
+### Para pessoas com deficiência visual
+
+- **Audiodescrição** de cada obra em dois níveis: descrição concisa (`~20s`, automática ao se aproximar quando ativada) e descrição estendida (`~90s`, sob demanda no painel da obra).
+- **Fallback Text-to-Speech** via Web Speech API caso o arquivo de áudio não carregue.
+- **Navegação por teclado** completa: `Tab` percorre as obras, `Enter` abre o painel da obra em foco, `Esc` fecha o painel, `F1` repete as instruções de navegação por voz.
+- **Compatível com leitores de tela** (NVDA, VoiceOver) por meio de ARIA labels em todos os controles interativos e de uma navegação semântica oculta com a lista de obras.
+
+### Para pessoas com deficiência auditiva
+
+- **Tradução em LIBRAS via VLibras** (Suíte de Acessibilidade do governo federal) — botão dedicado no painel da obra que aciona o avatar 3D oficial.
+- **Texto adaptado para sinais** preparado para cada obra, com estrutura recomendada para interpretação (identificação, descrição visual, contexto artístico, curiosidade).
+
+### Configurações globais
+
+- **Modal inicial de preferências** ao entrar em `/museu` — usuário escolhe entre experiência padrão, audiodescrição, LIBRAS ou alto contraste.
+- **Painel ♿ Acessibilidade** flutuante: pode ser aberto a qualquer momento para ajustar preferências.
+- **Alto contraste**: ativação automática via `prefers-contrast: more` do sistema ou manual via toggle.
+- **Escala de fonte ajustável** de 12px a 28px com slider acessível.
+- **Persistência local** das preferências (localStorage) — a configuração é lembrada entre visitas.
+
+### Conformidade
+
+Este projeto busca conformidade com:
+
+- **WCAG 2.1** nível AA
+- **Lei Brasileira de Inclusão** (Lei 13.146/2015), Art. 63
+- **Decreto 5.626/2005** sobre LIBRAS
+- **ABNT NBR 15290** sobre acessibilidade em comunicação
+
+---
+
 ## Melhorias futuras
 
 - **Galeria expandida:** inclusão das 45+ obras reais do acervo com fotografias aplicadas como texturas
 - **Áudio ambiental:** sons de pássaros, vento e ambiente rural do interior pernambucano com espacialização 3D
 - **Modo visita guiada:** narrador virtual que acompanha o usuário pelo percurso contando a história de cada obra
 - **Multiplayer:** grupos de estudantes visitando o museu simultaneamente com Photon ou Liveblocks
-- **Conteúdo em libras:** integração de vídeos em Língua Brasileira de Sinais nos painéis informativos
+- **Vídeos próprios em LIBRAS:** substituir o widget VLibras por gravações com intérprete humano certificado para qualidade superior
 
 ---
 

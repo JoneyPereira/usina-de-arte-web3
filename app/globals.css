@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --cor-painel-fundo: rgba(0, 0, 0, 0.7);
+  --cor-painel-texto: #f5f5f5;
+  --cor-painel-borda: rgba(252, 211, 77, 0.4);
+  --cor-acento: #fbbf24;
+}
+
 html,
 body {
   height: 100%;
@@ -19,4 +26,78 @@ main {
 /* Esconde cursor quando PointerLock está ativo */
 canvas:focus {
   outline: none;
+}
+
+/* Conteúdo visualmente oculto, mas anunciado por leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus,
+.sr-only button:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: black;
+  color: #fbbf24;
+  border: 2px solid #fbbf24;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+/* Alto contraste — automático conforme preferência do SO */
+@media (prefers-contrast: more) {
+  :root {
+    --cor-painel-fundo: #000000;
+    --cor-painel-texto: #ffffff;
+    --cor-painel-borda: #ffff00;
+    --cor-acento: #ffff00;
+  }
+}
+
+/* Alto contraste — manual via toggle */
+html[data-tema="alto-contraste"] {
+  --cor-painel-fundo: #000000;
+  --cor-painel-texto: #ffffff;
+  --cor-painel-borda: #ffff00;
+  --cor-acento: #ffff00;
+}
+
+html[data-tema="alto-contraste"] body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+html[data-tema="alto-contraste"] button,
+html[data-tema="alto-contraste"] a,
+html[data-tema="alto-contraste"] [role="button"] {
+  outline: 2px solid #ffff00;
+  outline-offset: 2px;
+}
+
+html[data-tema="alto-contraste"] :focus-visible {
+  outline: 3px solid #ffff00 !important;
+  outline-offset: 3px !important;
+}
+
+/* Foco geral acessível */
+:focus-visible {
+  outline: 2px solid var(--cor-acento);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }

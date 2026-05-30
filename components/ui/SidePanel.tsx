@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect } from "react";
 import { useMuseuStore } from "@/hooks/useMuseuStore";
+import { BarraAcessibilidade } from "./BarraAcessibilidade";
 
 export function SidePanel() {
   const obra = useMuseuStore((s) => s.obraSelecionada);
@@ -59,6 +60,8 @@ export function SidePanel() {
           <p className="mt-6 text-base leading-relaxed text-neutral-200">
             {obra.descricao}
           </p>
+
+          <BarraAcessibilidade obra={obra} />
 
           <p className="mt-8 text-xs text-neutral-500">
             Pressione <kbd className="rounded bg-neutral-800 px-1.5 py-0.5">Esc</kbd>{" "}
