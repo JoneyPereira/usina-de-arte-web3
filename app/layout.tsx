@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { VLibrasWidget } from "@/components/ui/VLibrasWidget";
 
 export const metadata: Metadata = {
   title: "UsinaVR — Museu Digital Imersivo",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className="antialiased bg-neutral-950 text-neutral-100">
         {children}
+        <VLibrasWidget />
       </body>
     </html>
   );
