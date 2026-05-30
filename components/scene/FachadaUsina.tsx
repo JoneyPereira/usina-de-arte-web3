@@ -1,5 +1,7 @@
 "use client";
 
+import { SoftShadows } from "@react-three/drei";
+
 export function FachadaUsina() {
   return (
     <group position={[150, 0, -50]}>
@@ -39,17 +41,17 @@ export function FachadaUsina() {
 export function Iluminacao() {
   return (
     <>
-      {/* Luz ambiente quente */}
+      <SoftShadows size={10} samples={16} focus={0.5} />
+
       <ambientLight intensity={0.45} color="#ffd9a8" />
 
-      {/* Sol Golden Hour */}
       <directionalLight
         position={[100, 60, 80]}
         intensity={1.4}
         color="#ffb060"
         castShadow
-        shadow-mapSize-width={1024}
-        shadow-mapSize-height={1024}
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
         shadow-camera-far={400}
         shadow-camera-left={-150}
         shadow-camera-right={150}
@@ -57,10 +59,7 @@ export function Iluminacao() {
         shadow-camera-bottom={-150}
       />
 
-      {/* Hemisphere para suavizar sombras */}
-      <hemisphereLight
-        args={["#ffd09a", "#3a4a2e", 0.35]}
-      />
+      <hemisphereLight args={["#ffd09a", "#3a4a2e", 0.35]} />
 
       <fog attach="fog" args={["#e8a472", 60, 320]} />
     </>
