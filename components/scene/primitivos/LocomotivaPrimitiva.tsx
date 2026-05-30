@@ -4,11 +4,11 @@ import type { Obra } from "@/data/obras";
 import { useMuseuStore } from "@/hooks/useMuseuStore";
 import * as THREE from "three";
 
-interface LocomotivaProps {
+interface Props {
   obra: Obra;
 }
 
-export function Locomotiva({ obra }: LocomotivaProps) {
+export function LocomotivaPrimitiva({ obra }: Props) {
   const setObraSelecionada = useMuseuStore((s) => s.setObraSelecionada);
   const obraProxima = useMuseuStore((s) => s.obraProxima);
   const ehProxima = obraProxima?.id === obra.id;
@@ -22,13 +22,11 @@ export function Locomotiva({ obra }: LocomotivaProps) {
 
   return (
     <group position={obra.posicao} onClick={handleClick}>
-      {/* Trilho */}
       <mesh position={[0, 0.05, 0]} receiveShadow>
         <boxGeometry args={[10, 0.1, 1.6]} />
         <meshStandardMaterial color="#3a2c20" roughness={1} />
       </mesh>
 
-      {/* Corpo principal — caldeira (cilindro deitado) */}
       <mesh
         position={[0, 1.4, 0]}
         rotation={[0, 0, Math.PI / 2]}
@@ -45,7 +43,6 @@ export function Locomotiva({ obra }: LocomotivaProps) {
         />
       </mesh>
 
-      {/* Cabine do maquinista */}
       <mesh position={[-2.8, 1.7, 0]} castShadow receiveShadow>
         <boxGeometry args={[2, 2.4, 1.8]} />
         <meshStandardMaterial
@@ -56,13 +53,11 @@ export function Locomotiva({ obra }: LocomotivaProps) {
         />
       </mesh>
 
-      {/* Chaminé */}
       <mesh position={[1.5, 2.6, 0]} castShadow>
         <cylinderGeometry args={[0.35, 0.4, 1.2, 12]} />
         <meshStandardMaterial color="#2b2018" roughness={1} />
       </mesh>
 
-      {/* Rodas */}
       {[-1.8, -0.6, 0.6, 1.8].map((x) => (
         <mesh
           key={x}
@@ -86,7 +81,6 @@ export function Locomotiva({ obra }: LocomotivaProps) {
         </mesh>
       ))}
 
-      {/* Farol frontal */}
       <mesh position={[2.3, 1.6, 0]}>
         <sphereGeometry args={[0.25, 12, 12]} />
         <meshStandardMaterial

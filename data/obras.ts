@@ -7,6 +7,8 @@ export interface Obra {
   cor: string;
   corEmissiva?: string;
   raioProximidade: number;
+  modeloCaminho: string;
+  escala?: [number, number, number];
 }
 
 export const obras: Obra[] = [
@@ -20,6 +22,7 @@ export const obras: Obra[] = [
     cor: "#5a3e2b",
     corEmissiva: "#a0622a",
     raioProximidade: 5,
+    modeloCaminho: "/models/locomotiva.glb",
   },
   {
     id: "diva",
@@ -31,6 +34,7 @@ export const obras: Obra[] = [
     cor: "#c0392b",
     corEmissiva: "#e74c3c",
     raioProximidade: 8,
+    modeloCaminho: "/models/diva.glb",
   },
   {
     id: "paisagem",
@@ -42,6 +46,7 @@ export const obras: Obra[] = [
     cor: "#85c1e9",
     corEmissiva: "#aed6f1",
     raioProximidade: 6,
+    modeloCaminho: "/models/paisagem.glb",
   },
   {
     id: "brasil2017",
@@ -53,6 +58,7 @@ export const obras: Obra[] = [
     cor: "#27ae60",
     corEmissiva: "#2ecc71",
     raioProximidade: 5,
+    modeloCaminho: "/models/brasil2017.glb",
   },
   {
     id: "hangar-rufino",
@@ -64,5 +70,6 @@ export const obras: Obra[] = [
     cor: "#7f8c8d",
     corEmissiva: "#bdc3c7",
     raioProximidade: 10,
+    modeloCaminho: "/models/hangar-rufino.glb",
   },
 ];
