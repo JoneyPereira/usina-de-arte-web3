@@ -1,7 +1,7 @@
 "use client";
 
-import { Suspense } from "react";
-import { Text, useGLTF } from "@react-three/drei";
+import { Suspense, type ReactNode } from "react";
+import { Text } from "@react-three/drei";
 import type { Obra } from "@/data/obras";
 import { useMuseuStore } from "@/hooks/useMuseuStore";
 import { Brasil2017Primitiva } from "@/components/scene/primitivos/Brasil2017Primitiva";
@@ -13,7 +13,11 @@ interface Props {
   obra: Obra;
 }
 
-function Brasil2017GLTF({ obra }: Props) {
+interface Brasil2017GLTFProps extends Props {
+  fallback: ReactNode;
+}
+
+function Brasil2017GLTF({ obra, fallback }: Brasil2017GLTFProps) {
   const setObraSelecionada = useMuseuStore((s) => s.setObraSelecionada);
 
   const handleClick = (e: THREE.Event) => {
@@ -28,6 +32,7 @@ function Brasil2017GLTF({ obra }: Props) {
         caminho={obra.modeloCaminho}
         scale={obra.escala}
         onClick={handleClick}
+        fallback={fallback}
       />
       <Text
         position={[0, 3.2, 0]}
@@ -49,10 +54,8 @@ export function ObraBrasil2017({ obra }: Props) {
   return (
     <ObraErrorBoundary fallback={fallback}>
       <Suspense fallback={fallback}>
-        <Brasil2017GLTF obra={obra} />
+        <Brasil2017GLTF obra={obra} fallback={fallback} />
       </Suspense>
     </ObraErrorBoundary>
   );
 }
-
-useGLTF.preload("/models/brasil2017.glb");
