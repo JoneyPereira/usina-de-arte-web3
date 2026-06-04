@@ -1,7 +1,5 @@
 "use client";
 
-import { SoftShadows } from "@react-three/drei";
-
 export function FachadaUsina() {
   return (
     <group position={[150, 0, -50]}>
@@ -39,25 +37,12 @@ export function FachadaUsina() {
 }
 
 export function Iluminacao() {
+  // Iluminação simples, sem sombras dinâmicas — compatível com a G210.
   return (
     <>
-      <SoftShadows size={10} samples={16} focus={0.5} />
+      <ambientLight intensity={1.2} color="#ffecd2" />
 
-      <ambientLight intensity={0.45} color="#ffd9a8" />
-
-      <directionalLight
-        position={[100, 60, 80]}
-        intensity={1.4}
-        color="#ffb060"
-        castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-        shadow-camera-far={400}
-        shadow-camera-left={-150}
-        shadow-camera-right={150}
-        shadow-camera-top={150}
-        shadow-camera-bottom={-150}
-      />
+      <directionalLight position={[100, 60, 80]} intensity={0.8} color="#ffb060" />
 
       <hemisphereLight args={["#ffd09a", "#3a4a2e", 0.35]} />
 
