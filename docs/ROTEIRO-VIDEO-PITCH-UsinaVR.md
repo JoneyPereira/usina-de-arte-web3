@@ -1,4 +1,5 @@
 # Roteiro — Vídeo-pitch UsinaVR
+
 **Duração total:** ~4 minutos  
 **Ferramenta de geração:** Google Veo 3  
 **Formato:** Narração em off + cenas geradas por IA + telas do projeto  
@@ -19,6 +20,7 @@ Cada bloco abaixo contém:
 ---
 
 ## CENA 1 — ABERTURA EMOCIONAL
+
 **Duração:** 0:00 – 0:40
 
 ---
@@ -106,6 +108,7 @@ Luz dourada do pôr do sol, atmosfera mágica. Cinematográfico, 4K.
 ---
 
 ## CENA 2 — APRESENTAÇÃO DO PROJETO
+
 **Duração:** 0:40 – 1:20
 
 ---
@@ -158,6 +161,7 @@ Luz suave de interior. Expressão de admiração e descoberta. Clima inclusivo, 
 ---
 
 ## CENA 3 — DEMONSTRAÇÃO DO PRODUTO
+
 **Duração:** 1:20 – 2:50
 
 ---
@@ -217,6 +221,7 @@ Brilho suave em tons de azul e branco. Estética futurista, porém acolhedora. C
 ---
 
 ## CENA 4 — TECNOLOGIA E DIFERENCIAIS
+
 **Duração:** 2:50 – 3:30
 
 ---
@@ -270,6 +275,7 @@ Professora sorrindo ao lado deles. Clima esperançoso, educativo e comunitário.
 ---
 
 ## CENA 5 — VISÃO DE FUTURO
+
 **Duração:** 3:30 – 4:00
 
 ---
@@ -313,6 +319,7 @@ O céu passa de dourado para um laranja intenso. Uma cena majestosa, emocionante
 ---
 
 ## CENA 6 — CALL TO ACTION / ENCERRAMENTO
+
 **Duração:** 4:00 – 4:15
 
 ---
