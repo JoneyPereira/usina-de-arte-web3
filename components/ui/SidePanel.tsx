@@ -49,13 +49,15 @@ export function SidePanel() {
           </p>
 
           <div
-            className="mt-6 h-40 w-full rounded-lg"
-            style={{
-              background: `linear-gradient(135deg, ${obra.cor}, ${
-                obra.corEmissiva ?? obra.cor
-              })`,
-            }}
-          />
+            className="mt-6 h-40 w-full overflow-hidden rounded-lg bg-neutral-900/20"
+            style={{ backgroundColor: obra.corEmissiva ?? obra.cor }}
+          >
+            <img
+              src={obra.fotoCaminho}
+              alt={`Foto da obra ${obra.titulo}`}
+              className="h-full w-full object-cover"
+            />
+          </div>
 
           <p className="mt-6 text-base leading-relaxed text-neutral-200">
             {obra.descricao}
