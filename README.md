@@ -4,7 +4,9 @@
 
 **Hackweb Web3 · RESTIC 29 · Desafio ExpoVerse**  
 **Aluno:** Joney Sousa Pereira  
-**Deploy:** [link-vercel-aqui]  
+**Deploy:** [https://usina-de-arte-web3.vercel.app/]
+**Video:** [https://youtu.be/8t5eGIyT7go]
+**Apresentação:** [https://drive.google.com/file/d/1x_3_j0S_xRAsOPAYd2XVltXquoEM1G7W/view?usp=sharing]
 
 ---
 
