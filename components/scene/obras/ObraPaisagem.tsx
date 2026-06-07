@@ -1,7 +1,6 @@
 "use client";
 
-import { Suspense, useCallback } from "react";
-import { useGLTF } from "@react-three/drei";
+import { Suspense, useCallback, type ReactNode } from "react";
 import type { Obra } from "@/data/obras";
 import { useMuseuStore } from "@/hooks/useMuseuStore";
 import { PaisagemPrimitiva } from "@/components/scene/primitivos/PaisagemPrimitiva";
@@ -27,7 +26,11 @@ function customizarVidro(mesh: THREE.Mesh) {
   mesh.castShadow = false;
 }
 
-function PaisagemGLTF({ obra }: Props) {
+interface PaisagemGLTFProps extends Props {
+  fallback: ReactNode;
+}
+
+function PaisagemGLTF({ obra, fallback }: PaisagemGLTFProps) {
   const setObraSelecionada = useMuseuStore((s) => s.setObraSelecionada);
 
   const handleClick = useCallback(
@@ -46,6 +49,7 @@ function PaisagemGLTF({ obra }: Props) {
       scale={obra.escala}
       onClick={handleClick}
       customizarMesh={customizarVidro}
+      fallback={fallback}
     />
   );
 }
@@ -55,10 +59,8 @@ export function ObraPaisagem({ obra }: Props) {
   return (
     <ObraErrorBoundary fallback={fallback}>
       <Suspense fallback={fallback}>
-        <PaisagemGLTF obra={obra} />
+        <PaisagemGLTF obra={obra} fallback={fallback} />
       </Suspense>
     </ObraErrorBoundary>
   );
 }
-
-useGLTF.preload("/models/paisagem.glb");

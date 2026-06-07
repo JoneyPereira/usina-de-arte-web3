@@ -12,13 +12,12 @@ import {
   Iluminacao,
 } from "@/components/scene/FachadaUsina";
 import { PlayerController } from "@/components/scene/PlayerController";
-import { Locomotiva } from "@/components/scene/obras/Locomotiva";
-import { ObraDiva } from "@/components/scene/obras/ObraDiva";
-import { ObraPaisagem } from "@/components/scene/obras/ObraPaisagem";
-import { ObraBrasil2017 } from "@/components/scene/obras/ObraBrasil2017";
-import { ObraHangar } from "@/components/scene/obras/ObraHangar";
+import {
+  ObraFoto,
+  precarregarFotos,
+} from "@/components/scene/obras/ObraFoto";
+import { ObraErrorBoundary } from "@/components/scene/obras/ObraErrorBoundary";
 import { Loader } from "@/components/scene/Loader";
-import { PostProcessing } from "@/components/scene/PostProcessing";
 import { useProximidade } from "@/hooks/useProximidade";
 import { useNavegacaoAcessivel } from "@/hooks/useNavegacaoAcessivel";
 import { PainelFlutuante } from "@/components/ui/PainelFlutuante";
@@ -30,13 +29,8 @@ import { AudiodescricaoProximidade } from "@/components/ui/AudiodescricaoProximi
 import { ModalPreferenciasInicial } from "@/components/ui/ModalPreferenciasInicial";
 import { NavegacaoAcessivel } from "@/components/ui/NavegacaoAcessivel";
 
-const RENDERIZADORES_POR_ID = {
-  locomotiva: Locomotiva,
-  diva: ObraDiva,
-  paisagem: ObraPaisagem,
-  brasil2017: ObraBrasil2017,
-  "hangar-rufino": ObraHangar,
-} as const;
+// Pré-carrega as fotos das obras (custo de VRAM mínimo na G210).
+precarregarFotos(obras.map((obra) => obra.fotoCaminho));
 
 function Cena() {
   useProximidade();
@@ -48,12 +42,13 @@ function Cena() {
       <Terrain />
       <Vegetacao />
       <FachadaUsina />
-      {obras.map((obra) => {
-        const Renderizador =
-          RENDERIZADORES_POR_ID[obra.id as keyof typeof RENDERIZADORES_POR_ID];
-        if (!Renderizador) return null;
-        return <Renderizador key={obra.id} obra={obra} />;
-      })}
+      {obras.map((obra) => (
+        <ObraErrorBoundary key={obra.id} fallback={null}>
+          <Suspense fallback={null}>
+            <ObraFoto obra={obra} />
+          </Suspense>
+        </ObraErrorBoundary>
+      ))}
     </>
   );
 }
@@ -71,9 +66,15 @@ export default function MuseuPage() {
       className="relative h-screen w-screen overflow-hidden"
     >
       <Canvas
-        shadows
-        gl={{ antialias: true }}
-        camera={{ fov: 70, near: 0.1, far: 800, position: [0, 1.7, 12] }}
+        shadows={false}
+        dpr={[1, 1.5]}
+        gl={{
+          antialias: false,
+          alpha: false,
+          powerPreference: "low-power",
+          failIfMajorPerformanceCaveat: false,
+        }}
+        camera={{ fov: 70, near: 0.1, far: 500, position: [0, 1.7, 12] }}
         aria-hidden="true"
       >
         <XR>
@@ -81,7 +82,6 @@ export default function MuseuPage() {
             <Cena />
             <PlayerController />
           </Suspense>
-          <PostProcessing />
         </XR>
       </Canvas>
 

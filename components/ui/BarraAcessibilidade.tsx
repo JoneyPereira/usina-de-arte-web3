@@ -19,6 +19,8 @@ export function BarraAcessibilidade({ obra }: Props) {
       textoFallback: obra.acessibilidade.textoAudiodescricaoCurta,
     });
 
+  const [librasAtivada, setLibrasAtivada] = useState(false);
+
   const ouvirLonga = () => {
     setDescricaoExpandida(true);
     reproduzir(obra.acessibilidade.audiodescricaoLonga, {
@@ -27,6 +29,7 @@ export function BarraAcessibilidade({ obra }: Props) {
   };
 
   const acionarLibras = () => {
+    setLibrasAtivada(true);
     traduzir(obra.acessibilidade.textoLibras);
   };
 
@@ -91,6 +94,15 @@ export function BarraAcessibilidade({ obra }: Props) {
           className="mt-4 rounded-md bg-neutral-900/60 p-3 text-sm leading-relaxed text-neutral-200"
         >
           <p>{obra.acessibilidade.textoAudiodescricaoLonga}</p>
+        </div>
+      )}
+
+      {librasAtivada && (
+        <div
+          aria-live="polite"
+          className="mt-4 rounded-md bg-blue-950/80 p-3 text-sm leading-relaxed text-blue-100"
+        >
+          <p>{obra.acessibilidade.textoLibras}</p>
         </div>
       )}
 

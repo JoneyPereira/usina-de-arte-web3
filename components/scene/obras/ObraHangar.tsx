@@ -1,7 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
-import { useGLTF } from "@react-three/drei";
+import { Suspense, type ReactNode } from "react";
 import type { Obra } from "@/data/obras";
 import { useMuseuStore } from "@/hooks/useMuseuStore";
 import { HangarRufinoPrimitiva } from "@/components/scene/primitivos/HangarRufinoPrimitiva";
@@ -13,7 +12,11 @@ interface Props {
   obra: Obra;
 }
 
-function HangarGLTF({ obra }: Props) {
+interface HangarGLTFProps extends Props {
+  fallback: ReactNode;
+}
+
+function HangarGLTF({ obra, fallback }: HangarGLTFProps) {
   const setObraSelecionada = useMuseuStore((s) => s.setObraSelecionada);
 
   const handleClick = (e: THREE.Event) => {
@@ -28,6 +31,7 @@ function HangarGLTF({ obra }: Props) {
         caminho={obra.modeloCaminho}
         scale={obra.escala}
         onClick={handleClick}
+        fallback={fallback}
       />
       <spotLight
         position={[0, 6, 0]}
@@ -54,10 +58,8 @@ export function ObraHangar({ obra }: Props) {
   return (
     <ObraErrorBoundary fallback={fallback}>
       <Suspense fallback={fallback}>
-        <HangarGLTF obra={obra} />
+        <HangarGLTF obra={obra} fallback={fallback} />
       </Suspense>
     </ObraErrorBoundary>
   );
 }
-
-useGLTF.preload("/models/hangar-rufino.glb");

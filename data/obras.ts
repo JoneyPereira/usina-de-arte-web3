@@ -17,6 +17,9 @@ export interface Obra {
   raioProximidade: number;
   modeloCaminho: string;
   escala?: [number, number, number];
+  fotoCaminho: string;        // Fase 2 billboard: foto WebP exibida em <Billboard>
+  alturaDisplay?: number;     // Altura do billboard em metros (padrão: 3)
+  larguraDisplay?: number;    // Largura do billboard em metros (padrão: 2.5)
   acessibilidade: Acessibilidade;
 }
 
@@ -32,6 +35,9 @@ export const obras: Obra[] = [
     corEmissiva: "#a0622a",
     raioProximidade: 5,
     modeloCaminho: "/models/locomotiva.glb",
+    fotoCaminho: "/fotos/locomotiva.webp",
+    alturaDisplay: 2.5,
+    larguraDisplay: 4,
     acessibilidade: {
       audiodescricaoCurta: "/audio/desc-locomotiva-curta.mp3",
       audiodescricaoLonga: "/audio/desc-locomotiva-longa.mp3",
@@ -54,6 +60,9 @@ export const obras: Obra[] = [
     corEmissiva: "#e74c3c",
     raioProximidade: 8,
     modeloCaminho: "/models/diva.glb",
+    fotoCaminho: "/fotos/diva.webp",
+    alturaDisplay: 5,
+    larguraDisplay: 4,
     acessibilidade: {
       audiodescricaoCurta: "/audio/desc-diva-curta.mp3",
       audiodescricaoLonga: "/audio/desc-diva-longa.mp3",
@@ -76,6 +85,9 @@ export const obras: Obra[] = [
     corEmissiva: "#aed6f1",
     raioProximidade: 6,
     modeloCaminho: "/models/paisagem.glb",
+    fotoCaminho: "/fotos/paisagem.webp",
+    alturaDisplay: 3,
+    larguraDisplay: 3.5,
     acessibilidade: {
       audiodescricaoCurta: "/audio/desc-paisagem-curta.mp3",
       audiodescricaoLonga: "/audio/desc-paisagem-longa.mp3",
@@ -98,6 +110,9 @@ export const obras: Obra[] = [
     corEmissiva: "#2ecc71",
     raioProximidade: 5,
     modeloCaminho: "/models/brasil2017.glb",
+    fotoCaminho: "/fotos/brasil2017.webp",
+    alturaDisplay: 2.8,
+    larguraDisplay: 3,
     acessibilidade: {
       audiodescricaoCurta: "/audio/desc-brasil2017-curta.mp3",
       audiodescricaoLonga: "/audio/desc-brasil2017-longa.mp3",
@@ -120,6 +135,9 @@ export const obras: Obra[] = [
     corEmissiva: "#bdc3c7",
     raioProximidade: 10,
     modeloCaminho: "/models/hangar-rufino.glb",
+    fotoCaminho: "/fotos/hangar-rufino.webp",
+    alturaDisplay: 4,
+    larguraDisplay: 5,
     acessibilidade: {
       audiodescricaoCurta: "/audio/desc-hangar-curta.mp3",
       audiodescricaoLonga: "/audio/desc-hangar-longa.mp3",

@@ -1,4 +1,5 @@
 # Roteiro — Vídeo-pitch UsinaVR
+
 **Duração total:** ~4 minutos  
 **Ferramenta de geração:** Google Veo 3  
 **Formato:** Narração em off + cenas geradas por IA + telas do projeto  
@@ -19,6 +20,7 @@ Cada bloco abaixo contém:
 ---
 
 ## CENA 1 — ABERTURA EMOCIONAL
+
 **Duração:** 0:00 – 0:40
 
 ---
@@ -31,6 +33,14 @@ Pernambuco, Brazil. Late afternoon golden light. Old industrial chimney stacks v
 in the distance. Heat haze over the fields. No people. Melancholic and majestic mood. 
 Cinematic, golden hour lighting, warm tones, documentary style, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Imagem aérea feita por drone descendo lentamente sobre um vasto canavial no interior de Pernambuco, Brasil.
+Luz dourada do final da tarde. Chaminés industriais antigas visíveis ao longe. Névoa de calor sobre os campos.
+Sem pessoas. Atmosfera melancólica e majestosa. Estilo cinematográfico, iluminação da hora dourada, tons quentes, estilo documental, 4K.
+```
+
 **[NARRAÇÃO — começa após 2s]**
 > *"A Zona da Mata Sul de Pernambuco guarda um dos maiores acervos de arte contemporânea do Brasil."*
 
@@ -44,6 +54,14 @@ Northeast Brazil, looking at a distant road. Dusty street, afternoon sun. Contem
 expression. No car, no bus stop visible. Feeling of geographic isolation. Warm tones, 
 cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PR-br):
+Plano geral de uma mulher de 60 anos sentada na varanda de uma pequena cidade rural no Nordeste do Brasil, olhando para uma estrada distante.
+Rua empoeirada, sol da tarde. Expressão contemplativa.
+Nenhum carro, nenhum ponto de ônibus visível. Sensação de isolamento geográfico. Tons quentes, cinematográfico, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"Mas para a maioria dos brasileiros… ele está fora de alcance."*
 
@@ -56,6 +74,14 @@ A young student with a backpack looking at a paper map, standing at a crossroads
 rural Brazil. No bus, no signs pointing to the destination. Frustrated but hopeful 
 expression. Warm afternoon light. Cinematic, golden hour, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Um jovem estudante com uma mochila nas costas, olhando para um mapa de papel, parado num cruzamento no interior do Brasil. Sem ônibus, sem placas indicando o destino.
+Expressão de frustração, mas também de esperança.
+Luz quente da tarde. Ambiente cinematográfico, hora dourada, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"A 150 quilômetros de Recife, sem transporte público direto — a Usina de Arte existe, mas nem todo mundo pode chegar até ela."*
 
@@ -68,12 +94,21 @@ Slow push-in on the facade of an old sugar mill converted into an art space in
 Northeast Brazil. Old brick walls, tropical vegetation, a vintage steam locomotive 
 on display near the entrance. Golden hour light, magical atmosphere. Cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Aproximação lenta da fachada de uma antiga usina de açúcar transformada em espaço de arte no Nordeste do Brasil.
+Paredes de tijolos antigos, vegetação tropical, uma locomotiva a vapor vintage em exposição perto da entrada.
+Luz dourada do pôr do sol, atmosfera mágica. Cinematográfico, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"Até agora."*
 
 ---
 
 ## CENA 2 — APRESENTAÇÃO DO PROJETO
+
 **Duração:** 0:40 – 1:20
 
 ---
@@ -94,6 +129,13 @@ environment appears — lush tropical vegetation, warm sunset light, a virtual s
 locomotive in the foreground. The environment loads smoothly. Modern, clean desk 
 setup. Cinematic, warm tones, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Close-up de mãos digitando em um teclado de laptop. Na tela, surge um ambiente virtual 3D de museu — vegetação tropical exuberante, luz quente do pôr do sol, uma locomotiva a vapor virtual em primeiro plano.
+O ambiente carrega sem problemas. Configuração de mesa moderna e organizada. Tons quentes e cinematográficos, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"Com um clique, qualquer pessoa — de qualquer lugar do mundo — entra no parque, caminha pelo acervo e se aproxima das obras."*
 
@@ -106,12 +148,20 @@ A child with visual impairment using a tablet with headphones, smiling as they
 explore a colorful virtual environment. Soft indoor light. Expression of wonder and 
 discovery. Inclusive, warm, hopeful mood. Cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Uma criança com deficiência visual usando um tablet com fones de ouvido, sorrindo enquanto explora um ambiente virtual colorido.
+Luz suave de interior. Expressão de admiração e descoberta. Clima inclusivo, acolhedor e esperançoso. Cinematográfico, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"Para estudantes de escolas públicas. Para pessoas com mobilidade reduzida. Para quem nunca poderia ir."*
 
 ---
 
 ## CENA 3 — DEMONSTRAÇÃO DO PRODUTO
+
 **Duração:** 1:20 – 2:50
 
 ---
@@ -132,6 +182,13 @@ trees, warm golden light filtering through the leaves. Path leading forward towa
 a large red monumental sculpture on a hill in the distance. Immersive, game-like 
 aesthetic but artistic. Cinematic, golden hour, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Perspectiva em primeira pessoa caminhando por uma floresta virtual 3D estilizada com poucos polígonos, com árvores tropicais e uma luz dourada e quente filtrando-se pelas folhas.
+O caminho leva a uma grande escultura monumental vermelha em uma colina ao longe. Estética imersiva, semelhante a um jogo, mas artística. Cinematográfica, hora dourada, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"A vegetação — inspirada no programa de reflorestamento com mais de 600 espécies da Usina real — cria o ambiente de parque botânico ao longo de todo o percurso."*
 
@@ -152,12 +209,19 @@ Close-up of a glowing holographic information panel floating in mid-air in front
 a red sculptural form in a virtual museum environment. Text visible but stylized. 
 Soft blue-white glow. Futuristic yet warm aesthetic. Cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Close-up de um painel holográfico luminoso flutuando no ar em frente a uma forma escultural vermelha em um ambiente de museu virtual. Texto visível, porém estilizado.
+Brilho suave em tons de azul e branco. Estética futurista, porém acolhedora. Cinematográfico, 4K.
+```
 **[NARRAÇÃO]**
 > *"Cinco obras emblemáticas do acervo nesta versão — prontas para expandir para as mais de quarenta obras reais da Usina."*
 
 ---
 
 ## CENA 4 — TECNOLOGIA E DIFERENCIAIS
+
 **Duração:** 2:50 – 3:30
 
 ---
@@ -177,6 +241,14 @@ Split screen: on the left, a person wearing a VR headset moving their hands in a
 art gallery. On the right, the same gallery seen from inside the VR headset — 
 sculptures, tropical plants, warm light. Seamless, modern, immersive. Cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Tela dividida: à esquerda, uma pessoa usando um headset de realidade virtual movendo as mãos em uma galeria de arte.
+À direita, a mesma galeria vista de dentro do headset de realidade virtual — esculturas, plantas tropicais, luz quente.
+Perfeito, moderno, imersivo. Cinematográfico, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"E quando um headset está disponível, o botão WebXR transforma a experiência em Realidade Virtual completa — sem precisar reinstalar nada."*
 
@@ -190,12 +262,20 @@ a single laptop, pointing at a colorful 3D virtual art environment on the screen
 Teacher smiling beside them. Hopeful, educational, community mood. Cinematic, warm 
 tones, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Plano geral de uma sala de aula de escola pública no Nordeste do Brasil. Alunos reunidos em torno de um único laptop, apontando para um ambiente de arte virtual 3D colorido na tela.
+Professora sorrindo ao lado deles. Clima esperançoso, educativo e comunitário. Tons cinematográficos e acolhedores, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"Uma turma inteira pode visitar o museu com um único computador na sala de aula. Sem ônibus fretado. Sem autorização de viagem. Sem custo."*
 
 ---
 
 ## CENA 5 — VISÃO DE FUTURO
+
 **Duração:** 3:30 – 4:00
 
 ---
@@ -207,6 +287,13 @@ Aerial shot slowly pulling back from a virtual 3D landscape that grows in real t
 more buildings, more sculptures, more trees appearing as the camera rises. Sense of 
 expansion and growth. Bright, optimistic, futuristic aesthetic. Cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Plano aéreo com afastamento lento de uma paisagem virtual em 3D que cresce em tempo real — mais edifícios, mais esculturas, mais árvores surgindo à medida que a câmera sobe.
+Sensação de expansão e crescimento. Estética brilhante, otimista e futurista. Cinematográfica, 4K.
+```
+
 **[NARRAÇÃO]**
 > *"A versão atual é o ponto de partida. O roadmap inclui: acervo completo com as 40 obras reais, áudio ambiental imersivo do interior pernambucano, modo visita guiada narrada — e multiplayer para visitas escolares simultâneas."*
 
@@ -219,12 +306,20 @@ Time-lapse of a sunset over the Northeast Brazilian countryside — golden light
 sugarcane fields, distant chimneys of an old mill. Sky turns from gold to deep orange. 
 Majestic, emotional, closing shot mood. Cinematic, 4K.
 ```
+---
+```
+Prompt Veo 3 (PT-br):
+Timelapse de um pôr do sol no interior do Nordeste brasileiro — luz dourada, plantações de cana-de-açúcar, chaminés distantes de um antigo engenho.
+O céu passa de dourado para um laranja intenso. Uma cena majestosa, emocionante, que transmite uma atmosfera final. Cinematográfica, em 4K.
+```
+
 **[NARRAÇÃO]**
 > *"A Usina de Arte existe desde 1929. O patrimônio está lá. Falta apenas a ponte."*
 
 ---
 
 ## CENA 6 — CALL TO ACTION / ENCERRAMENTO
+
 **Duração:** 4:00 – 4:15
 
 ---

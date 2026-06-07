@@ -1,7 +1,6 @@
 "use client";
 
-import { Suspense } from "react";
-import { useGLTF } from "@react-three/drei";
+import { Suspense, type ReactNode } from "react";
 import type { Obra } from "@/data/obras";
 import { useMuseuStore } from "@/hooks/useMuseuStore";
 import { DivaPrimitiva } from "@/components/scene/primitivos/DivaPrimitiva";
@@ -13,7 +12,11 @@ interface Props {
   obra: Obra;
 }
 
-function DivaGLTF({ obra }: Props) {
+interface DivaGLTFProps extends Props {
+  fallback: ReactNode;
+}
+
+function DivaGLTF({ obra, fallback }: DivaGLTFProps) {
   const setObraSelecionada = useMuseuStore((s) => s.setObraSelecionada);
 
   const handleClick = (e: THREE.Event) => {
@@ -28,6 +31,7 @@ function DivaGLTF({ obra }: Props) {
       position={obra.posicao}
       scale={obra.escala}
       onClick={handleClick}
+      fallback={fallback}
     />
   );
 }
@@ -37,10 +41,8 @@ export function ObraDiva({ obra }: Props) {
   return (
     <ObraErrorBoundary fallback={fallback}>
       <Suspense fallback={fallback}>
-        <DivaGLTF obra={obra} />
+        <DivaGLTF obra={obra} fallback={fallback} />
       </Suspense>
     </ObraErrorBoundary>
   );
 }
-
-useGLTF.preload("/models/diva.glb");
